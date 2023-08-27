@@ -5,7 +5,8 @@
 //Even_Fibonacci_Numbers();
 //Largest_Prime_Factor_Of_The_Number_600851475143();
 //Largest_Palindrome_Product_3_Digit_Numbers();
-Smallest_Multiple();
+//Smallest_Multiple();
+Sum_Square_Difference();
 
 #region Methods
 
@@ -104,6 +105,20 @@ static void Smallest_Multiple()
 
         count++;
     }
+}
+
+static void Sum_Square_Difference()
+{
+    double sumSquare = 0;
+    double squareSum = 0;
+
+    for (int i = 1; i <= 100; i++)
+    {
+       sumSquare+= Math.Pow((double)i, 2);
+       squareSum+=i;
+    }
+
+    Console.WriteLine(Math.Pow(squareSum, 2) - sumSquare);
 }
 
 #endregion
